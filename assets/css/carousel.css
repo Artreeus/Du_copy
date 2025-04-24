@@ -121,12 +121,12 @@
     opacity: 1;
 }
 
-.view-all-btn {
+.view-all-btn2 {
     text-align: center;
     margin-top: 70px;
 }
 
-.view-all-btn a {
+.view-all-btn2 a {
     background-color: #ffc107;
     color: #fff;
     padding: 10px 25px;
@@ -137,7 +137,7 @@
     display: inline-block;
 }
 
-.view-all-btn a:hover {
+.view-all-btn2 a:hover {
     background-color: #e0a800;
     transform: translateY(-3px);
 }

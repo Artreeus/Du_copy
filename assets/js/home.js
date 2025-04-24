@@ -52,3 +52,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+// resource js 
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Add hover effects for links
+    const links = document.querySelectorAll('.du-resources-link');
+    links.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            this.style.color = '#ffb400';
+            this.querySelector('.du-resources-link-icon').style.color = '#ffb400';
+        });
+        
+        link.addEventListener('mouseleave', function() {
+            this.style.color = '#444';
+            this.querySelector('.du-resources-link-icon').style.color = '#0074d9';
+        });
+    });
+});
