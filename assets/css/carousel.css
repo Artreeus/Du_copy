@@ -81,23 +81,15 @@
     font-family: 'Hind Siliguri', sans-serif;
 }
 
-.read-more {
-    display: inline-block;
-    padding: 8px 20px;
-    background-color: #fff;
-    color: #ffc107;
-    border: 1px solid #ffc107;
-    border-radius: 30px;
-    font-weight: 500;
-    font-size: 14px;
-    transition: all 0.3s;
-    text-decoration: none;
+.latest-news-section .read-more{
+    border: 2px solid  #ffc107;
+}
+.latest-news-section .read-more:hover{
+    background: transparent;
+    color: #192f59;
 }
 
-.read-more:hover {
-    background-color: #ffc107;
-    color: #fff;
-}
+
 
 .read-more i {
     margin-right: 5px;
