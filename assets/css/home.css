@@ -257,6 +257,7 @@
     text-align: center;
     font-weight: 700;
     font-size: 14px;   
+    position: relative;
   }
   
   .du-read-more-btn:hover {
@@ -395,78 +396,75 @@
   }
   
   .du-resources-section {
-    padding: 3rem  0;
-  }
-  
-  .du-resources-container {
+    padding: 3rem 0;
+}
+ 
+.du-resources-container {
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .du-resources-row {
+    padding: 0 15px;
+}
+ 
+.du-resources-row {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 30px;
+    margin: 0 -15px;
+    background-color: transparent !important;
+    border: none !important;
+}
+ 
+.du-resources-item {
+    flex: 0 0 calc(33.333333% - 30px);
+    margin: 15px;
+    padding: 20px;
     border: 2px solid #e0e0e0 !important;
-    background-color: #ffffff !important;
-  }
-  
-  .du-resources-item {
-    flex: 0 0 33.333333%;
-    padding: 15px;
-    border-right: 2px solid #e0e0e0 !important;
-    border-bottom: 2px solid #e0e0e0 !important;
     position: relative;
     background-color: #ffffff !important;
-  }
-  
-  .du-resources-item:nth-child(3n) {
-    border-right: none !important;
-  }
-  
-  .du-resources-item:nth-child(4),
-  .du-resources-item:nth-child(5),
-  .du-resources-item:nth-child(6) {
-    border-bottom: none !important;
-  }
-  .du-resources-header {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+ 
+.du-resources-header {
     text-align: center;
     margin-bottom: 20px;
     color: var(--du-primary-color);
     font-size: 18px;
     font-weight: 600;
     padding-bottom: 10px;
-    border-bottom: 1px solid var(--du-border-color);
-  }
-  
-  .du-resources-icon-container {
-    width: 80px;
-    height: 80px;
+    position: relative;
+}
+.du-resources-header::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left:0;
+  width: 100%;
+  height: 2px;
+  background-color: #333232c4;
+}
+ 
+.du-category-icon {
+    width: 70px;
+    height: 70px;
     margin: 0 auto 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .du-resources-icon-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  }
-  
-  .du-resources-links {
+}
+ 
+.du-resources-links {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-  
-  .du-resources-link-item {
+}
+ 
+.du-resources-link-item {
     margin-bottom: 10px;
     display: flex;
     align-items: flex-start;
-  }
-  
-  .du-resources-link {
+}
+ 
+.du-resources-link {
     color: #444;
     text-decoration: none;
     display: inline-flex;
@@ -474,20 +472,20 @@
     transition: color 0.3s;
     font-size: 14px;
     line-height: 1.5;
-  }
-  
-  .du-resources-link:hover {
+}
+ 
+.du-resources-link:hover {
     color: var(--du-accent-color);
-  }
-  
-  .du-resources-link-icon {
+}
+ 
+.du-resources-link-icon {
     color: #0074d9;
     margin-right: 8px;
     font-size: 14px;
     flex-shrink: 0;
     margin-top: 4px;
-  }
-  
+}
+ 
   .du-category-icon {
     width: 70px;
     height: 70px;
@@ -529,8 +527,8 @@
   
   @media (max-width: 991px) {
     .du-resources-item {
-        flex: 0 0 50%;
-    }
+      flex: 0 0 calc(50% - 30px);
+  }
     
     .du-resources-item:nth-child(3n) {
         border-right: 2px solid var(--du-border-color);
@@ -548,9 +546,8 @@
   
   @media (max-width: 767px) {
     .du-resources-item {
-        flex: 0 0 100%;
-        border-right: none !important;
-    }
+      flex: 0 0 calc(100% - 30px);
+  }
     
     .du-resources-item:not(:last-child) {
         border-bottom: 2px solid var(--du-border-color) !important;
@@ -568,7 +565,7 @@
 
 .admin-card {
     border-radius: 0;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.507);
     margin-bottom: 30px;
     height: 100%;
     background-color: white;
@@ -632,12 +629,13 @@
     margin-bottom: 20px;
 }
 .vc-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
+
 .vc-img {
     width: 150px;
     height: 180px;
