@@ -1,0 +1,138 @@
+/* Add these styles to your existing CSS */
+
+/* Mega Menu Styles */
+.react-menus li.mega-menu-item {
+  position: static !important;
+}
+
+.react-menus li.mega-menu-item > ul.mega-menu {
+  display: none !important;
+  position: absolute !important;
+  left: 0 !important;
+  width: 100% !important;
+  background: #fff !important;
+  padding: 30px !important;
+  box-shadow: 0 30px 30px rgba(10, 0, 45, 0.1) !important;
+  border-radius: 0 0 4px 4px !important;
+  border-top: 3px solid #d2093c !important;
+  z-index: 999 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(10px) !important;
+  transition: all 0.3s ease !important;
+}
+
+.react-menus li.mega-menu-item:hover > ul.mega-menu {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+/* Mega Menu Grid Layout */
+.mega-menu-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 30px !important;
+}
+
+/* Mega Menu Column */
+.mega-menu-column {
+  padding: 0 15px !important;
+}
+
+/* Mega Menu Column Title */
+.mega-menu-title {
+  color: #00306e !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  margin-bottom: 15px !important;
+  padding-bottom: 8px !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+/* Mega Menu List */
+.mega-menu-list {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.mega-menu-list li {
+  margin-bottom: 10px !important;
+  width: 100% !important;
+}
+
+.mega-menu-list li a {
+  color: #4d5765 !important;
+  font-size: 15px !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  display: block !important;
+  padding: 5px 0 !important;
+}
+
+.mega-menu-list li a:hover {
+  color: #d2093c !important;
+  padding-left: 5px !important;
+}
+
+/* Highlight Certain Items */
+.highlight-item {
+  background: #f8f9fa !important;
+  padding: 10px !important;
+  border-radius: 4px !important;
+  margin-bottom: 10px !important;
+}
+
+.highlight-item a {
+  color: #d2093c !important;
+  font-weight: 600 !important;
+}
+
+/* Responsive Mega Menu */
+@media screen and (max-width: 991px) {
+  .react-menus li.mega-menu-item {
+      position: relative !important;
+  }
+  
+  .react-menus li.mega-menu-item > ul.mega-menu {
+      position: static !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      border-top: none !important;
+      display: none !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+  }
+  
+  .mega-menu-grid {
+      grid-template-columns: 1fr !important;
+      gap: 15px !important;
+  }
+  
+  .mega-menu-column {
+      padding: 0 0 15px 15px !important;
+      border-bottom: 1px solid #f5f3f3 !important;
+  }
+  
+  .mega-menu-title {
+      font-size: 16px !important;
+      margin-bottom: 10px !important;
+      padding-bottom: 5px !important;
+  }
+  
+  .mega-menu-list li {
+      margin-bottom: 5px !important;
+  }
+  
+  .mega-menu-list li a {
+      font-size: 14px !important;
+      padding: 5px 0 !important;
+  }
+  
+  .react-menus li.mega-menu-item.menu-active > ul.mega-menu {
+      display: block !important;
+  }
+}
