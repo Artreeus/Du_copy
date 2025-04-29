@@ -3,6 +3,25 @@ body {
   background-color: #f8f9fa;
 }
 
+.go-back-btn {
+  padding: 10px 20px;
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+.go-back-section{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 25px  0;
+}
+
+
+
 /* static banner */
 .notice .static-banner {
   position: relative;
