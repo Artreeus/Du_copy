@@ -419,6 +419,7 @@ img.w-100 {
   max-width: 200px;
   height: 80px;
   margin-bottom: 15px;
+  margin: auto auto;
 }
 
 .contact-info {
