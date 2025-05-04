@@ -3,6 +3,7 @@
 .university-section {
     padding: 3rem 0;
     background-color: #f8f9fa;
+    text-align: justify;
   }
   
   .university-content {
@@ -623,6 +624,7 @@
 .vc-section{
     padding: 3rem 0;
     background: #f8f9fa;
+    text-align: justify;
 }
 
 .top-row {
