@@ -198,7 +198,8 @@
 }
 
 .read-more:hover {
-    background-color: #f0f8ff;
+    background-color: #ffffff;
+    color: #003366;
 }
 
 .read-more::before {

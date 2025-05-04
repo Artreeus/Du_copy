@@ -53,8 +53,9 @@ body {
 
 .event-img {
     width: 100%;
-    height: 200px;
+    height: 300px;
     overflow: hidden;
+    margin: auto auto;
 }
 
 .event-img img {
