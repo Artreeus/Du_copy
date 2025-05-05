@@ -363,10 +363,25 @@ img.w-100 {
   position: relative;
   padding: 0;
   border-top: 2px solid #f46004;
+  width: 100%;
 }
 
 .footer-section .container {
   max-width: 1180px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer-section .logo-sec .text-medical {
+  font-size: 25px;
+}
+
+.footer-section .logo-sec .text-versity {
+  font-size: 25px;
+  text-align: right;
 }
 
 .footer-section::before {
@@ -385,9 +400,37 @@ img.w-100 {
   position: relative;
   z-index: 2;
 }
+.footer-section .medical {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.footer-section .uni {
+  display: inline-block;
+  text-align: left;
+}
 
 .footer-main {
   padding: 40px 0;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.footer-col {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 0 0 25%;
+  max-width: 25%;
+  margin-bottom: 30px;
 }
 
 .footer-title {
@@ -446,6 +489,19 @@ img.w-100 {
   z-index: 2;
 }
 
+.footer-bottom-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-bottom-col {
+  position: relative;
+  width: 100%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
 .copyright {
   font-size: 14px;
   margin-bottom: 0;
@@ -457,36 +513,150 @@ img.w-100 {
   text-decoration: none;
 }
 
+.login-links {
+  text-align: right;
+}
+
 .login-links a {
   color: white;
   text-decoration: none;
   margin-left: 15px;
   font-size: 14px;
   transition: color 0.3s;
+  display: inline-block;
 }
 
 .login-links a:hover {
   color: #f46004;
 }
 
-@media (max-width: 767px) {
-  .login-links a {
-    margin-left: 0;
-    margin-right: 15px;
-    display: inline-block;
-    padding: 5px 0;
+/* Responsive Breakpoints - Footer Specific */
+@media (max-width: 1200px) {
+  .footer-section .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-section .container {
+    max-width: 720px;
   }
 
-  .footer-bottom .col-md-6 {
+  .footer-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .footer-section {
+    background-size: 250px auto;
+  }
+
+  .footer-section .logo-sec .text-medical,
+  .footer-section .logo-sec .text-versity {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-section .container {
+    max-width: 540px;
+  }
+
+
+  .footer-section {
+    background-size: 200px auto;
+  }
+
+  .footer-section .logo-sec .text-medical,
+  .footer-section .logo-sec .text-versity {
+    font-size: 20px;
     text-align: center;
   }
 
-  .text-md-end {
-    text-align: center !important;
-    margin-top: 10px;
+  .footer-bottom-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .login-links {
+    text-align: center;
+  }
+
+  .login-links a {
+    margin: 5px 8px;
   }
 }
-/* Responsive Breakpoints */
+
+@media (max-width: 576px) {
+  .footer-section .container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .footer-section .uni {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .footer-section {
+    background-position: top center;
+    background-size: 180px auto;
+  }
+
+  .footer-main {
+    padding-top: 180px; /* Space for the background logo */
+    padding-bottom: 20px;
+  }
+
+  .footer-title {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .footer-links a {
+    text-align: center;
+  }
+
+  .contact-info p {
+    text-align: center;
+  }
+
+  .university-logo {
+    max-width: 160px;
+    height: 70px;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-main {
+    padding-top: 160px;
+  }
+
+  .footer-section {
+    background-size: 150px auto;
+  }
+
+  .footer-section .logo-sec .text-medical,
+  .footer-section .logo-sec .text-versity {
+    font-size: 18px;
+  }
+
+  .login-links a {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+/* Maintain original responsive styles for other sections */
 @media (max-width: 992px) {
   .custom-slider-content {
     flex-direction: column !important;

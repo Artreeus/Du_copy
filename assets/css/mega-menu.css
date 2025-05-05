@@ -1,4 +1,4 @@
-/* Mega Menu Styles */
+/* Mega Menu Styles - Fixed Version */
 .react-menus li.mega-menu-item {
   position: static !important;
 }
@@ -27,7 +27,6 @@
     display: block !important;
   }
   
-  /* Make sure mega menu list is visible on large screens */
   .mega-menu-list {
     display: block !important;
   }
@@ -43,6 +42,7 @@
 /* Mega Menu Column */
 .mega-menu-column {
   padding: 0 15px !important;
+  background: transparent !important; /* Make column transparent */
 }
 
 /* Mega Menu Column Title */
@@ -50,21 +50,26 @@
   color: #00306e !important;
   font-size: 18px !important;
   font-weight: 700 !important;
+  border-bottom: 1px solid #00306e7a;
   margin-bottom: 15px !important;
   padding-bottom: 8px !important;
-  border-bottom: 1px solid #f0f0f0 !important;
+  background: transparent !important; /* Ensure title has no background */
 }
 
-/* Mega Menu List */
+/* Mega Menu List - Multiple approaches to remove white background */
 .mega-menu-list {
   list-style: none !important;
   margin: 0 !important;
   padding: 15px !important;
+  background: transparent !important; /* Remove white background */
+  background-color: transparent !important; /* Alternative property */
+  box-shadow: none !important; /* Remove any shadow that might create visual background */
 }
 
 .mega-menu-list li {
   margin-bottom: 10px !important;
   width: 100% !important;
+  background: transparent !important; /* Ensure list items are transparent */
 }
 
 .mega-menu-list li a {
@@ -74,18 +79,35 @@
   transition: all 0.3s ease !important;
   display: block !important;
   padding: 5px 0 !important;
+  background: transparent !important; /* Ensure links are transparent */
 }
 
 .mega-menu-list li a:hover {
   color: #d2093c !important;
   padding-left: 5px !important;
+  background: transparent !important; /* Keep transparent even on hover */
 }
 
+/* Override any theme defaults that might add backgrounds */
+.mega-menu-list,
+.mega-menu-list li,
+.mega-menu-list a {
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
 
 /* Responsive Mega Menu */
 @media screen and (max-width: 991px) {
   .react-menus li.mega-menu-item {
     position: relative !important;
+  }
+
+  .mega-menu-title {
+    color: #00306e !important;
+    font-size: 12px !important;
+    padding-left: 25px;
+    
   }
   
   .react-menus li.mega-menu-item > ul.mega-menu {
@@ -106,14 +128,19 @@
   }
   
   .mega-menu-column {
-    padding: 0 0 15px 15px !important;
+    padding: 0 0 0 10px !important;
     border-bottom: 1px solid #f5f3f3 !important;
+    background: transparent !important; /* Ensure transparency on mobile */
   }
   
   .mega-menu-title {
     font-size: 16px !important;
     margin-bottom: 10px !important;
     padding-bottom: 5px !important;
+  }
+  
+  .mega-menu-list {
+    background: transparent !important; /* Reinforce transparency on mobile */
   }
   
   .mega-menu-list li {
@@ -139,13 +166,23 @@
     content: '-' !important;
   }
   
-  /* This handles the display of mega menu when active on mobile */
   .react-menus li.mega-menu-item.menu-active > ul.mega-menu {
     display: block !important;
   }
   
-  /* Ensure other menus are closed */
   .react-menus li.mega-menu-item:not(.menu-active) > ul.mega-menu {
     display: none !important;
+  }
+}
+
+@media (max-width: 576px){
+  .mega-menu-title {
+    color: #00306e !important;
+    font-size: 14px !important;
+    padding-left: 15px;
+  }
+  
+  .mega-menu-list {
+    background: transparent !important; /* Ensure transparency on smaller screens */
   }
 }
